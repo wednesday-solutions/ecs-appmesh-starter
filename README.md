@@ -21,5 +21,5 @@ The `scripts` folder contains scripts to automate creation of ECS task roles and
 
 ### Assets
 
-The assets folder contains task deifnitions, policies and roles needed for running an AppMesh with ECS 
+The `assets` folder contains task deifnitions, policies and roles needed for running an AppMesh with ECS 
 
