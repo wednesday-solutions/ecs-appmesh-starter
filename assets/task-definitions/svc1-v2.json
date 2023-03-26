@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/sample-app-ecs-svc1-v2",
+          "awslogs-group": "/ecs/the-wednesday-super-app-svc1-v2",
           "awslogs-region": "ap-south-1",
           "awslogs-create-group": "true",
           "awslogs-stream-prefix": "ecs"
@@ -34,7 +34,7 @@
       "environment": [
         {
           "name": "APPMESH_VIRTUAL_NODE_NAME",
-          "value": "mesh/sample-app-mesh/virtualNode/virtual-node-1-sample-app-mesh"
+          "value": "mesh/the-wednesday-super-app/virtualNode/the-wednesday-super-app-virtual-node-2"
         }
       ],
       "resourceRequirements": null,
@@ -48,7 +48,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "511522223657.dkr.ecr.ap-south-1.amazonaws.com/sample_app_ecs_svc1_v2",
+      "image": "511522223657.dkr.ecr.ap-south-1.amazonaws.com/the-wednesday-super-app-svc1-v2",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": [
@@ -70,7 +70,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "sample-app-mesh-svc1-v2"
+      "name": "the-wednesday-super-app-svc1-v2"
     },
     {
       "dnsSearchDomains": null,
@@ -79,7 +79,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/sample-app-ecs-svc1-v2",
+          "awslogs-group": "/ecs/the-wednesday-super-app-svc1-v2",
           "awslogs-region": "ap-south-1",
           "awslogs-create-group": "true",
           "awslogs-stream-prefix": "ecs"
@@ -93,7 +93,7 @@
       "environment": [
         {
           "name": "APPMESH_VIRTUAL_NODE_NAME",
-          "value": "mesh/sample-app-mesh/virtualNode/virtual-node-2-sample-app-mesh"
+          "value": "mesh/the-wednesday-super-app/virtualNode/the-wednesday-super-app-virtual-node-2"
         }
       ],
       "resourceRequirements": null,
@@ -138,90 +138,9 @@
   ],
   "placementConstraints": [],
   "memory": "1024",
-  "taskRoleArn": "arn:aws:iam::511522223657:role/app-mesh-service-discovery-demo",
-  "compatibilities": ["EC2", "FARGATE"],
-  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:511522223657:task-definition/sample-app-ecs-svc1-v2:6",
-  "family": "sample-app-ecs-svc1-v2",
-  "requiresAttributes": [
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.execution-role-awslogs"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.aws-appmesh"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.container-health-check"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.execution-role-ecr-pull"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.task-eni"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.container-ordering"
-    }
-  ],
+  "taskRoleArn": "arn:aws:iam::511522223657:role/svcTaskRole",
+  "family": "the-wednesday-super-app-svc1-v2",
+  
   "pidMode": null,
   "requiresCompatibilities": ["FARGATE"],
   "networkMode": "awsvpc",
@@ -230,8 +149,6 @@
     "cpuArchitecture": null
   },
   "cpu": "512",
-  "revision": 6,
-  "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": {
     "type": "APPMESH",

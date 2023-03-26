@@ -2,9 +2,10 @@ const express = require("express")
 
 const app = express();
 app.get("/", function (req, res) { 
-    console.log("service 2 was called")
+    const version = "v2"
+    console.log(`${version} was called`)
     return res.send({
-        data: "This is servicev2"
+        data: `This is service${version}`
     })
 })
 app.listen(9000, function () { 

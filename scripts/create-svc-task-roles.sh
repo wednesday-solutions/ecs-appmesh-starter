@@ -1,4 +1,4 @@
-#!/bin/bash -e -x
+#!/bin/bash -x
 
 # create role
 aws iam create-role --cli-input-json file://assets/roles/svc-task-role.json

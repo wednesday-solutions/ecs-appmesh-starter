@@ -1,4 +1,4 @@
 {
   "PolicyName": "appmesh-ecs-cw-policy",
-  "PolicyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":[\"logs:CreateLogStream\",\"logs:PutLogEvents\",\"logs:CreateLogGroup\"],\"Resource\":\"arn:aws:logs:*:*:/ecs/sample-app-ecs-*:*\"}]}"
+  "PolicyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":[\"logs:CreateLogStream\",\"logs:PutLogEvents\",\"logs:CreateLogGroup\"],\"Resource\":\"arn:aws:logs:*:*:/ecs/the-wednesday-super-app-*:*\"}]}"
 }

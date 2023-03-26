@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/sample-app-ecs-service-gateway",
+          "awslogs-group": "/ecs/the-wednesday-super-app-gateway",
           "awslogs-region": "ap-south-1",
           "awslogs-create-group": "true",
           "awslogs-stream-prefix": "ecs"
@@ -21,6 +21,11 @@
           "hostPort": 9080,
           "protocol": "tcp",
           "containerPort": 9080
+        },
+        {
+          "hostPort": 9901,
+          "protocol": "tcp",
+          "containerPort": 9901
         }
       ],
       "command": [],
@@ -29,7 +34,7 @@
       "environment": [
         {
           "name": "APPMESH_VIRTUAL_NODE_NAME",
-          "value": "mesh/sample-app-mesh/virtualGateway/sample-app-mesh-virtual-gateway"
+          "value": "mesh/the-wednesday-super-app/virtualGateway/the-wednesday-super-app-virtual-gateway"
         }
       ],
       "resourceRequirements": null,
@@ -75,77 +80,7 @@
   "placementConstraints": [],
   "memory": "512",
   "taskRoleArn": "arn:aws:iam::511522223657:role/gwTaskRole",
-  "compatibilities": ["EC2", "FARGATE"],
-  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:511522223657:task-definition/sample-app-ecs-service-gateway:9",
-  "family": "sample-app-ecs-service-gateway",
-  "requiresAttributes": [
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.24"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.execution-role-awslogs"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.container-health-check"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.execution-role-ecr-pull"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.task-eni"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-    }
-  ],
+  "family": "the-wednesday-super-app-service-gateway",
   "pidMode": null,
   "requiresCompatibilities": ["FARGATE"],
   "networkMode": "awsvpc",
@@ -154,8 +89,6 @@
     "cpuArchitecture": "X86_64"
   },
   "cpu": "256",
-  "revision": 9,
-  "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
   "volumes": []

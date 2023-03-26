@@ -1,7 +1,7 @@
-#!/bin/bash -e -x
+#!/bin/bash -x
 
 #create role
-# aws iam create-role --cli-input-json file://assets/roles/gw-task-execution-role.json
+aws iam create-role --cli-input-json file://assets/roles/gw-task-execution-role.json
 
 # attach policies
 aws iam put-role-policy --cli-input-json file://assets/policies/taskExecutionRole/ecr-policy.json --role-name gwTaskExecutionRole
