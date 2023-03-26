@@ -1,6 +1,25 @@
-# Sample App
+# ECS AppMesh Starter
 
-This app runs a basic health check API on `/`. The application runs on port 9000
+This repo contains a node application exposed on port 9000. 
+It contains a single AP, `/`, that returns the service version that is currently hosted
 
-Install dependencies using `yarn` 
-Run the app using `node index.js`
+### Installation
+
+```
+  yarn
+```
+
+### Run
+
+```
+  node index.js 
+```
+
+### Scripts
+
+The `scripts` folder contains scripts to automate creation of ECS task roles and task execution roles.
+
+### Assets
+
+The assets folder contains task deifnitions, policies and roles needed for running an AppMesh with ECS 
+
